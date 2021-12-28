@@ -1,4 +1,4 @@
-<?php include_once "functions.php"; ?>
+<?php include "functions.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,11 +33,15 @@
            $numTwo = $_POST['num2'];
 
            if(empty($numOne) or empty($numOne)){
-               echo "<span style='color:#EE6554'>Field must not be empty!</span><br>";
+                echo "<span style='color:#EE6554'>Field must not be empty!</span><br>";
+           }else{
+                echo "First Number is :" .$numOne. " & Second Number is :" .$numTwo. "<br>";
+                $cal = new Calculation;
+                $cal->add($numOne, $numTwo);
+                $cal->sub($numOne, $numTwo);
+                $cal->mul($numOne, $numTwo);
+                $cal->div($numOne, $numTwo);
            }
-
-           $cal = new Calculation;
-           $cal->add($numOne, $numTwo);
        }
 
     ?>
