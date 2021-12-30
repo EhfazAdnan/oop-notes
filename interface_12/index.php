@@ -1,0 +1,3 @@
+<?php
+
+// interface - keyword implements

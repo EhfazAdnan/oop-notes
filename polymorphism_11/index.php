@@ -29,5 +29,9 @@ echo '<br/>';
 
 $adminObj = new Admin('subClass',10);
 $adminObj->level = "admin";
-$adminObj->display();
+$adminObj->display(); 
+
+if($adminObj instanceof UserData){
+    echo "inherited";
+}
 ?>
